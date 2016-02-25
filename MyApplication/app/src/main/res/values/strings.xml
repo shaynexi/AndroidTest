@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="app_code">密码</string>
+    <string name="app_email">邮箱</string>
+    <string name="app_regis">注册</string>
+    <string name="app_log">登录</string>
+</resources>

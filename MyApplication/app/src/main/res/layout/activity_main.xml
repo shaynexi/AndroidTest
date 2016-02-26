@@ -57,7 +57,17 @@
         android:text="@string/app_regis"
         android:id="@+id/button2"
         android:onClick="Register"
-        android:layout_alignTop="@+id/button"
+        android:layout_below="@+id/editText2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/button_textSize"
+        android:text="退出"
+        android:id="@+id/button4"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
@@ -83,5 +93,7 @@
         android:layout_above="@+id/editText2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+
 
 </RelativeLayout>

@@ -30,6 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="@dimen/TextView_textSize"
             android:text="邮箱"
             android:id="@+id/textView" />
 
@@ -44,6 +45,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="@dimen/TextView_textSize"
             android:text="密码"
             android:id="@+id/textView4" />
 
@@ -58,7 +60,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="再次输入密码"
+            android:textSize="@dimen/TextView_textSize"
+            android:text="确认密码"
             android:id="@+id/textView5" />
 
         <EditText
@@ -72,8 +75,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="Register_Check"
+            android:textSize="@dimen/button_textSize"
             android:text="注册"
             android:id="@+id/button3" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/button_textSize"
+            android:text="返回"
+            android:id="@+id/button5"
+            android:layout_gravity="center_horizontal" />
 
     </LinearLayout>
 </RelativeLayout>

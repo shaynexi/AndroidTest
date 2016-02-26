@@ -3,6 +3,7 @@ package com.example.myapplication;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -12,6 +13,7 @@ import java.util.regex.Pattern;
 public class MainActivity extends AppCompatActivity {
 
     private EditText et;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +39,9 @@ public class MainActivity extends AppCompatActivity {
     public void Register(View v)  {
         Intent intent = new Intent();
         Bundle bundle = new Bundle();
-        intent.setClass(MainActivity.this,RegisterActivity.class);
+        intent.setClass(MainActivity.this, RegisterActivity.class);
         intent.putExtras(bundle);
         startActivity(intent);
+        Log.d("Register", "register");
     }
 }

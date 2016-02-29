@@ -15,7 +15,7 @@ import java.util.regex.Pattern;
 public class RegisterActivity extends AppCompatActivity {
 
     private EditText et3, et4, et5;
-    private Button btn;
+    private Button btn1;
 
 
     @Override
@@ -26,8 +26,9 @@ public class RegisterActivity extends AppCompatActivity {
         et4 = (EditText) findViewById(R.id.editText4);
         et5 = (EditText) findViewById(R.id.editText5);
 
-        btn = (Button) findViewById(R.id.button5);
-        btn.setOnClickListener(new View.OnClickListener(){
+
+        btn1 = (Button) findViewById(R.id.button5);
+        btn1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(RegisterActivity.this,MainActivity.class);
@@ -43,12 +44,14 @@ public class RegisterActivity extends AppCompatActivity {
         final String pattern = "^[a-z0-9]+([._\\\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$";
         Pattern r = Pattern.compile(pattern);
         Matcher m = r.matcher(str3);
+        Bundle data=new Bundle();
+        data.putString("str3", str3);
+
 
         if (str4.equals(str5)&&m.find()&&str4.length()>0) {
-            Intent intent = new Intent();
-            Bundle bundle = new Bundle();
-            intent.setClass(RegisterActivity.this,RegisterSuccessActivity.class);
-            intent.putExtras(bundle);
+
+            Intent intent = new Intent(RegisterActivity.this,RegisterSuccessActivity.class);
+            intent.putExtras(data);
             startActivity(intent);
         }
         else if(str4.length()<=0){
